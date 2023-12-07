@@ -46,4 +46,11 @@ class BookController extends Controller
         return redirect()->route('books.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
+    public function test(Book $book):View
+    {
+        $books = Book::all();
+
+        return view('news', compact('books'));
+    }
+
 }

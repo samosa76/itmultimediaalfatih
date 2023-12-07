@@ -15,8 +15,8 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::resource('/books', BookController::class);
+Route::get('/', [BookController::class, 'test']);
+
