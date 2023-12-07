@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,16 +19,12 @@
 <body>
 
     <section id="home" class="text-white tm-font-big tm-parallax">
-        <div>
-            @include('includes.navbar')
-        </div>
+        @include('includes.navbar')
     </section>
 
-    <section id="info" class="services-section section-padding section-bg">
-        <div id="info">
-            @yield('content')
-        </div>
-    </section>
+    <div>
+        @yield('content')
+    </div>
 
     <div>
         @yield('footer')
@@ -114,6 +111,8 @@
         $(function() {
             // Hero Section - Background Parallax
             background_image_parallax($(".tm-parallax"), 0.30, false);
+
+            
 
             // Handle window resize
             window.addEventListener('resize', function() {
